@@ -1,0 +1,32 @@
+center {
+    color:black; 
+    text-align:center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+}
+#about {
+    color: black;
+    background: #efefef;
+}
+#about .btn {
+    margin-top: 0px;
+    margin-bottom: 100px;
+}
+
+.center {
+    float:right;
+  }
+
+follow{color : blue}
+
+.col-md-6.contact-info .follow {
+    color: blue;
+}
+ 
+
+
+
+
+

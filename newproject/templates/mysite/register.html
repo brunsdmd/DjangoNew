@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+{% extends 'mysite/index.html' %}
+{% block body_block %}
+    <h2><b>Complete to Register</b></h2>
+    <img src="\static\images\5l.jpg"  width="280" height="290" class="center">
+    <div class="container">
+        <form method="post">
+            {{ form.as_p }}
+            {% csrf_token %}
+            <input type="submit" class="btn btn-primary btn-lg px-4 me-md-2" value="Register">
+        </form>
+    </div>
+    <br> </br>
+    <a href="{% url 'login' %}">
+        <button type="submit" class="btn btn-primary btn-lg px-4 me-md-2">Go to Login</button>
+    </a>
+{% endblock %}

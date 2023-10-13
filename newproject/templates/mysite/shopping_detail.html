@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+{% extends 'mysite/index.html' %}
+{% block body_block %}
+<h2><b>Customers Shopping Details</b></h2>
+<div class="shop">
+    {% if orders %}
+    <table>
+        <thead>
+            <th>Customer Name </th>
+            <th>Product Bought </th>
+            <th>Quantity </th>
+            <th>Order Total </th>
+
+        </thead>
+        {% for order in orders %}
+            <tr>
+                <td>{{ order.CustomerId }}</td>
+                <td>{{ order.ProductId }}
+                <td>{{ order.Qty }}
+                <td>{{ order.OrderTotal }}
+                </td>
+            </tr>
+            {% endfor %}
+        </table>
+        {% else %}
+        <p> No customer so far!! </p>
+        {% endif %}
+    </div>
+    {% endblock %}

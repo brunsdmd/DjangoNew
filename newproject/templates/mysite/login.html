@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+{% extends 'mysite/index.html' %}
+{% block body_block %}
+    <h2><b> Login </b></h2>
+    <img src="\static\images\Waterheart.jpg"  width="280" height="290" class="center">
+    <div class="container">
+        <form method="post">
+            {{ form.as_p }}
+            {% csrf_token %}
+            <input type="submit" class="btn btn-primary btn-lg px-4 me-md-2" value="Login">
+            {% if error_message %}
+                 <p style="color: red;">{{ error_message }}</p>
+            {% endif %}
+
+        </form>
+    </div>
+    <br> </br>
+    <a href="{% url 'register' %}">
+        <button type="submit" class="btn btn-primary btn-lg px-4 me-md-2">Go to Register</button>
+    </a>
+{% endblock %}
